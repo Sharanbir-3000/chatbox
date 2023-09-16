@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+body {
+    font-family: 'Ubuntu', sans-serif;
+    padding: 0;
+    margin: 0;
+    background-color:#0c020f;
+}
+nav{
+    margin: 0;
+    padding: 0;
+    height: 8vh;
+    border-bottom: grey 1px solid;
+}
+ul {
+    display: flex;
+    margin-left: 2vw;
+    padding: 0;
+    list-style-type: none;
+}
+.name{
+    margin-left: 80vw;
+    margin-top: 1.5vh;
+    color : azure;
+    width: auto;
+    margin-left: 1vw;
+}
+li,img{
+    margin: 0;
+    padding: 0;
+
+}
+.user-pic{
+    max-height : 30px;
+    max-width : 30px;
+    border-radius : 50%;
+    margin-top : 0.7vh;
+    margin-left: 80vw;
+}
+.dropdown {
+    display: flex;
+    margin-top: 0;
+  }
+  
+.dropbtn {
+    color: black;
+    padding: 0;
+    width: 4vw;
+    font-size: 30px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .dropbtn:hover, .dropbtn:focus {
+    background-color: #2980B9;
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    padding: 1.5vh;
+    width: auto;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown a:hover {background-color: #ddd;}
+  
+  .show {display: block;}
+
+  @media only screen and (max-width : 800px){
+    nav{
+        margin: 0;
+        padding: 0;
+        height: 8vh;
+        width: auto;
+        border-bottom: grey 1px solid;
+    }
+    .name{
+        
+        margin-top: 1.5vh;
+        color : azure;
+        width: 12vw;
+        margin-left: 1vw;
+    }
+    .user-pic{
+        max-height : 30px;
+        max-width : 30px;
+        border-radius : 50%;
+        margin-top : 1.5vh;
+        margin-left: 50vw;
+    }
+    .dropbtn {
+        color: black;
+        padding: 0;
+        margin-top: 1vh;
+        margin-left: 1.5vw;
+        width: 10vw;
+        font-size: 30px;
+        border: none;
+        cursor: pointer;
+      }
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        padding: 0.5vh;
+        width: auto;
+        overflow: auto;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+      }
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+      
+      .dropdown a:hover {background-color: #ddd;}
+      
+      .show {display: block;}
+  }

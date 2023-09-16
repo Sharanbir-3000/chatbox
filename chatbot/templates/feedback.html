@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <link rel="shortcut icon" href="{% static 'images/logo.png' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'styles/feedback.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/navbar.css' %}">
+</head>
+<body>
+    <header>
+    {% include 'navbar.html' %}
+    </header>
+<main>
+<div class="container">
+<form class="form" action="" method="POST">
+    {% csrf_token %}
+
+    <label class="display-font" for="id_name">Name : </label>
+        <input class="form-item" type="text" name="name" maxlength="20" required id="id_name">
+
+    <label class="display-font" for="id_email">Email : </label>
+        <input class="form-item" type="email"  name="email" maxlength="254" required id="id_email">
+
+    <label class="display-font" for="id_age">Age : </label> 
+        <input class="form-item" type="text" name="age" required id="id_age">
+
+    <label class="display-font" for="id_gender">Gender : </label>
+    <select class="form-item" name="gender" id="id_gender">
+        <option value="Homo Sapiens">Homo Sapiens</option>
+        <option value="Women">Women</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        <option value="Others">Others</option>
+    </select>
+
+    <label class="display-font" for="id_phone">Mobile : </label> 
+        <input class="form-item" type="text" name="phone" maxlength="10" required id="id_phone">
+
+    <label class="display-font" for="id_location">City/State : </label> 
+        <input class="form-item" type="text"  name="location" maxlength="50" required id="id_location">
+
+    <label class="display-font" for="id_descprition">Describe Your Feedback : </label>
+        <textarea class="form-item" name="descprition" cols="20" rows="4" maxlength="250" required id="id_descprition"></textarea>
+
+    <input class="sub" type="submit" value="Submit">
+
+</form>
+
+</div>
+</main>
+    <footer>
+        {% include 'footer.html' %}
+    </footer>
+</body>
+</html>

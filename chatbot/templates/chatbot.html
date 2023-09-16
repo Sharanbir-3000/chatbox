@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}ChatBot{% endblock title %}
+
+{% block content %}
+
+<div class="chat-container">
+    <div class="bot">
+        <img class="bot-pic" src="{% static 'images/logo.png' %}">
+        <div class="content-bot">
+             How may i help you ?
+        </div>
+    </div>
+
+        
+</div>
+
+<form class="text-form">
+    {% csrf_token %}
+    <div class="input-user">
+        <div class="content">
+           <input type="text" name="prompt" class="prompt" placeholder="Type your message...">
+           <button type="submit" id="send">Send</button>
+          
+        </div>
+    </div>
+</form>
+<script>
+    var a = "{{request.user.profile.profile_pic.url}}";
+</script>
+<script src="{% static 'js/chatbot.js'%}"></script>
+{% endblock content %}

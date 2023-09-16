@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="shortcut icon" href="{% static 'images/logo.png' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'styles/register.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/footer.css' %}">
+    
+</head>
+<body>
+    <main>
+    <img class="profile-pic" src="{% static 'images/logo.png' %}">
+    <div class="heading">Sign up to ChatBox.AI</div>
+
+    <form class="container" action="" method="POST">
+        {% csrf_token %}
+        
+       <input class="box" type="text" name="username" maxlength="150"  id='id_username' required="" placeholder="Your Name">
+    
+       <input class="box" type="email" name="email" maxlength="254" id="id_email" required="" placeholder="Email@example.com">
+
+       
+        <input class="box" type="password" name="password1" required="" id="id_password1" placeholder="Password">
+        
+        <label for="showPassword1">
+        <input type="checkbox" id="showPassword1" class="showPassword">
+        Show Password</label>
+        
+
+            <input class="box" type="password" name="password2" required="" id="id_password2" placeholder="Confirm Password">
+            
+            <label for="showPassword2">
+            <input type="checkbox" id="showPassword2" class="showPassword">
+            Show Password</label>
+
+            <input type="submit" class='btn' value="Sign Up">
+
+            <div class="foot">
+              <p>Already Have Account ? <a class='link' href="{% url 'login' %}">Sign In</a></p>
+            </div>
+       
+    </form>
+</main>
+<footer>
+    {% include 'footer.html' %}
+</footer>
+
+<script>
+  const showPasswordCheckbox1 = document.getElementById('showPassword1');
+  const passwordInput1 = document.getElementById('id_password1');
+
+  showPasswordCheckbox1.addEventListener('change', function() {
+      if (this.checked) {
+          passwordInput1.type = 'text';
+      } else {
+          passwordInput1.type = 'password';
+      }
+  });
+
+  const showPasswordCheckbox = document.getElementById('showPassword2');
+  const passwordInput = document.getElementById('id_password2');
+
+  showPasswordCheckbox.addEventListener('change', function() {
+      if (this.checked) {
+          passwordInput.type = 'text';
+      } else {
+          passwordInput.type = 'password';
+      }
+  });
+  
+
+</script>
+</body>
+</html>

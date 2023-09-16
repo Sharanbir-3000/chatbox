@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatBox.AI</title>
+    <link rel="shortcut icon" href="{% static 'images/logo.png' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'styles/welcome.css' %}">
+</head>
+<body>
+    <header>
+
+    </header>
+
+    <main>
+        <div class="base-container">
+            <div class="box"><p>Welcome to <b>ChatBox.AI</b></p>   </div>
+            <a class="btn" href="{% url 'register' %}"><pre>Get Started &#8594</pre></a>
+        </div>
+    </main>
+
+    <footer>
+        {% include 'footer.html' %}
+    </footer>
+</body>
+</html>

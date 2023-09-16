@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+body{
+    background-color: #d5e4e3;
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu', sans-serif;
+}
+.profile-pic{
+    max-height : 10vh;
+    max-width : 10vw;
+    border-radius : 50%;
+    margin-top : 5vh;
+    margin-left: 46vw;
+    box-shadow: 1px 1px;
+    color: #6a7473;
+}
+.heading{
+    display: flex;
+    justify-content: center;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    font-weight: 200;
+    font-size: 5vh;
+}
+.container{
+    display: flex;
+    align-self: center;
+    padding: 4vh;
+    flex-direction: column;
+    height: 45vh;
+    background-color: #040005;
+    width: 20vw;
+    border-radius: 20px;
+    align-items: center;
+    margin: auto;
+}
+.box {
+    width: 16vw;
+    padding: 1vh;
+    margin-top: 2.5vh;
+    margin-bottom: auto;
+    display: flex;
+    flex-direction: column;
+}
+input[type=text],input[type=password],input[type=email]{
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-bottom: 1px solid aliceblue;
+    color: aliceblue;
+}
+label{
+    margin: 0.5vh 0 0 1.2vw;
+    padding: 0;
+    color: aliceblue;
+    font-weight: 100;
+    font-size: 12px;
+    display: flex;
+    align-self: flex-start;
+}
+.showpassword{
+
+    margin: 0;
+    padding: 0;
+}
+.btn{
+    align-self: center;
+    width: 16vw;
+    padding: 1vh;
+    margin-top: 2vh;
+    background-color: #00AD7C;
+    border: #00AD7C 2px solid;
+    border-radius: 6px;
+}
+.btn:hover{
+    background-color: #016448;
+    border: #016448 2px solid;
+}
+.foot{
+    display: flex;
+    width: auto;
+    margin: 0;
+    color: aliceblue;
+    font-size: 12px;
+}
+.link{
+    align-items: end;
+    text-decoration: none;
+    margin-left: 0.5vw;
+    padding: 0.5vh;
+    font-weight: 500;
+    border-radius: 4px;
+    color: rgb(103, 35, 167);
+}
+.link:hover{
+    background-color: azure;
+}
+
+@media only screen and (max-width : 800px) {
+    .profile-pic{
+        max-height : 0vh;
+        max-width : 0vw;
+    }
+    .heading{
+        display: flex;
+        justify-content: center;
+        margin-top: 2vh;
+        margin-bottom: 2vh;
+        font-weight: 200;
+        font-size: 4vh;
+    }
+    .container{
+        display: flex;
+        align-self: center;
+        padding: 2vh;
+        flex-direction: column;
+        height: auto;
+        background-color: #040005;
+        width: 80vw;
+        border-radius: 20px;
+        align-items: center;
+        margin: auto;
+    }
+    .box {
+        width: 60vw;
+        padding: 1vh;
+        margin-top: 2.5vh;
+        margin-bottom: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    input[type=text],input[type=password],input[type=email]{
+        border: 0;
+        outline: 0;
+        background: transparent;
+        border-bottom: 1px solid aliceblue;
+        color: aliceblue;
+    }
+    label{
+        margin: 0.5vh 0 0 7vw;
+        padding: 0;
+        color: aliceblue;
+        font-weight: 100;
+        font-size: 12px;
+        display: flex;
+        align-self: flex-start;
+    }
+    .showpassword{
+        margin: 0;
+        padding: 0;
+    }
+    .foot{
+        display: flex;
+        width: auto;
+        margin: 1vh;
+        color: aliceblue;
+        font-size: 12px;
+    }
+    .link{
+        align-items: end;
+        text-decoration: none;
+        margin-left: 0.5vw;
+        padding: 0.5vh;
+        font-weight: 500;
+        border-radius: 4px;
+        color: rgb(103, 35, 167);
+    }
+    .btn{
+        align-self: center;
+        width: 40vw;
+        padding: 1vh;
+        margin-top: 2vh;
+        background-color: #00AD7C;
+        border-radius: 6px;
+    }
+    .btn:hover{
+        background-color: #016448;
+    }
+}

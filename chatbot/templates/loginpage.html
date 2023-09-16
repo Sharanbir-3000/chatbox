@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="shortcut icon" href="{% static 'images/logo.png' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'styles/login.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/footer.css' %}">
+</head>
+<body>
+    <main>
+      <img class="profile-pic" src="{% static 'images/logo.png' %}">
+        <div class="heading">Sign in to ChatBox.AI</div>
+        
+        <form class="container" action="" method="POST">
+            {% csrf_token %}
+
+          <input class="box" type="text" name="username" maxlength="150" autofocus="" required="" id="id_username" placeholder="Your Name">
+          
+          <input class="box" type="password" name="password" required="" id="id_password" placeholder="Password">
+          
+          <label for="showPassword">
+          <input type="checkbox" id="showPassword" class="showPassword">
+          Show Password</label>
+          
+          <a class="forgot" href="{% url 'reset_password' %}">Forgot Password?</a>
+          
+         
+            <input type="submit" class='btn' value="Log In">
+          <div class="foot">
+            <p>Haven't Account ? <a class='link' href="{% url 'register' %}">Sign Up</a></p>
+          </div>
+            
+        </form>
+        
+    </main>
+    <footer>
+      {% include 'footer.html' %}
+    </footer>
+    <script>
+      const showPasswordCheckbox = document.getElementById('showPassword');
+      const passwordInput = document.getElementById('id_password');
+
+      showPasswordCheckbox.addEventListener('change', function() {
+          if (this.checked) {
+              passwordInput.type = 'text';
+          } else {
+              passwordInput.type = 'password';
+          }
+      });
+
+    </script>
+</body>
+</html>

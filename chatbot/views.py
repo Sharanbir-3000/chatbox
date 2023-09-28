@@ -120,3 +120,4 @@ def loginpage(request):
 def logoutpage(request):
     logout(request)
     return redirect('login')
+
